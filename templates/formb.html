@@ -1,0 +1,47 @@
+<form class="form-style1" id="step1">
+  <div class="row">
+    <div class="col-sm-12">
+      <div class="mb20">
+        <label class="heading-color ff-heading fw600 mb10">Title</label>
+          <aside> {{ form.title }} </aside>
+{#                                <input name="title" type="text" class="form-control" placeholder="Your Name">#}
+      </div>
+    </div>
+    <div class="col-sm-12">
+      <div class="mb20">
+        <label class="heading-color ff-heading fw600 mb10">Description</label>
+          <aside id="textarea"> {{ form.description }} </aside>
+{#                                <textarea cols="30" rows="5" name="description" placeholder="There are many variations of passages.">{{ form.description }}</textarea>#}
+      </div>
+    </div>
+
+    <div class="col-sm-6 col-xl-4">
+      <div class="mb20">
+        <label class="heading-color ff-heading fw600 mb10">Property Status</label>
+        <div class="location-area">
+          <select class="selectpicker" multiple>
+            <option>All Cities</option>
+            <option>Pending</option>
+            <option>Processing</option>
+            <option>Published</option>
+          </select>
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-6 col-xl-4">
+      <div class="mb30">
+        <label class="heading-color ff-heading fw600 mb10">Price in Ksh</label>
+          <aside> {{ form.price }} </aside>
+      </div>
+    </div>
+
+
+    <div class="col-md-12">
+      <div class="d-sm-flex justify-content-between">
+       <a  class="ud-btn btn-dark" href="#step2">Next Step<i class="fal fa-arrow-right-long"></i></a>
+      </div>
+    </div>
+  </div>
+</form>
+
+
