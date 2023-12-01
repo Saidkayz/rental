@@ -133,10 +133,6 @@ def printinvoice(request):
     return render(request, 'invoice.html')
 
 
-def agency(request):
-    return render(request, 'agency.html')
-
-
 def index2(request):
     return render(request, 'index2.html')
 
@@ -153,32 +149,12 @@ def site(request):
     return render(request, 'sitemap.html')
 
 
-def agencysingle(request):
-    return render(request, 'agency-single.html')
-
-
-def agentlist(request):
-    return render(request, 'agent-list.html')
-
-
-def agentsingle(request):
-    return render(request, 'agent-single.html')
-
-
 def blogsingle(request):
     return render(request, 'blog-single.html')
 
 
 def blog1(request):
     return render(request, 'blog-v1.html')
-
-
-def blog2(request):
-    return render(request, 'blog-v2.html')
-
-
-def blog3(request):
-    return render(request, 'blog-v3.html')
 
 
 def compare(request):
@@ -241,13 +217,6 @@ def banner(request):
     return render(request, 'banner.html')
 
 
-def half1(request):
-    return render(request, 'property-half1-map.html')
-
-
-def half2(request):
-    return render(request, 'property-half2-map.html')
-
 
 def mapheaderstyle(request):
     return render(request, 'property-header-map.html')
@@ -257,28 +226,10 @@ def list(request):
     return render(request, 'property-list.html')
 
 
-def listall(request):
-    return render(request, 'property-list-all.html')
-
 
 def single(request):
     return render(request, 'property-single-v1.html')
 
-
-def single2(request):
-    return render(request, 'property-single-v2.html')
-
-
-def single3(request):
-    return render(request, 'property-single-v3.html')
-
-
-def cart(request):
-    return render(request, 'shop-cart.html')
-
-
-def ui(request):
-    return render(request, 'ui-element.html')
 
 def pay(request):
     return render(request, 'paymembership.html')
