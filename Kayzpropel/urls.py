@@ -66,8 +66,8 @@ urlpatterns = [
     path('pay/', views.pay, name='pay'),
     path('stk/', views.stk, name='stk'),
     path('token/', views.token, name='token'),
-path('print/', views.print_page, name='print_page'),
-    path('send-email/', views.send_email, name='send_email')
+    path('print/', views.print_page, name='print_page'),
+
 
 ]
 
