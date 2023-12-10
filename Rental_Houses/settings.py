@@ -23,9 +23,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-9d-)b0piy9c7d9yi+)7pwb4p-@6h!jtvn9i5ie)c#*=5ct^*(@'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
-ALLOWED_HOSTS = ['127.0.0.1','.vercel.app']
+ALLOWED_HOSTS = ['127.0.0.1', '.vercel.app']
 
 
 # Application definition
@@ -77,15 +77,21 @@ WSGI_APPLICATION = 'Rental_Houses.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'railway',
-        'USER': 'postgres',
-        'PASSWORD': 'dbDaDgdgBgEg*aFA1E*Ad4b-edDeB-Gg',
-        'HOST': 'roundhouse.proxy.rlwy.net',
-        'PORT': '55537',
-
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': BASE_DIR / 'db.sqlite3',
     }
 }
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.postgresql',
+#         'NAME': 'railway',
+#         'USER': 'postgres',
+#         'PASSWORD': 'dbDaDgdgBgEg*aFA1E*Ad4b-edDeB-Gg',
+#         'HOST': 'roundhouse.proxy.rlwy.net',
+#         'PORT': '55537',
+#
+#     }
+# }
 
 
 # Password validation
@@ -123,16 +129,24 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/4.2/howto/static-files/
 
 STATIC_URL = 'static/'
-STATICFILES_DIRS = os.path.join(BASE_DIR, 'static'),
-STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles_build', 'static')
+STATICFILES_DIRS = [
+    BASE_DIR, 'static'
+]
 
+# STATICFILES_DIRS = [
+#     os.path.join(BASE_DIR,  'static'),  # Replace with your additional directories
+#     # Add other directories if needed
+# ]
+#
+# # Define the directory where static files will be collected
+# STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-MEDIA_URL ='/media/'
+MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
 
